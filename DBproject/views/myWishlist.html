@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="myWishlist.css">
+    <title>My Wishlist</title>
+   
+</head>
+<body>
+    <header>       
+        <div class="navbar">   
+            <div class="search-filter">
+                <button id="commercial-button" onClick="createCommercialPlantBoxes()">Commercial</button>
+                <button id="gift-button" onClick="createGiftPlantBoxes()">Gift</button>  
+            </div>
+        </div>
+    </header>
+
+    <div class="product-list">
+        <!-- Product boxes will be dynamically added here -->
+    </div>
+
+    <script>
+        // Example data from the backend (you can fetch this data from an API)
+        const numberOfProducts = 5; // Replace with the number of products received from the backend
+
+        // Example product data from the backend (an array of products)
+        const productDataArray = [
+            {
+                id: "12345",
+                name: "Product 1",
+                price: "$19.99",
+                quantity: "10",
+                imageSrc: "sowing-sunflower.png"
+            },
+            {
+                id: "67890",
+                name: "Product 2",
+                price: "$29.99",
+                quantity: "5",
+                imageSrc: "sowing-sunflower.png"
+            },
+            // Add more product objects as needed
+        ];
+
+        // Function to create and append product boxes
+        function createProductBoxes() {
+            const productContainer = document.querySelector(".product-list");
+
+            for (let i = 0; i < numberOfProducts; i++) {
+                const productBox = document.createElement("div");
+                productBox.className = "product-box";
+
+                const product = productDataArray[i % productDataArray.length]; // Reuse product data in a loop
+
+                productBox.innerHTML = `
+                    <img src="${product.imageSrc}" alt="Product Image" class="product-image">
+                    <div class="product-field">
+                        <span>Product Name:</span>
+                        <div class="output-field">${product.quantity}</div>
+                    </div>
+                    <div class="product-field">
+                        <span>Quantity:</span>
+                        <div class="output-field">${product.name}</div>
+                    </div>
+                    <div class="product-field">
+                        <span>Price:</span>
+                        <div class="output-field">${product.price}</div>
+                    </div>
+                
+                    <div class="product-field">
+                        <button class="remove-button">Remove</button>
+                    </div>
+                `;
+
+                productContainer.appendChild(productBox);
+            }
+        }
+
+        // Call the function to create and append product boxes
+        createProductBoxes();
+    </script>
+</body>
+</html>

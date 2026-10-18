@@ -1,0 +1,145 @@
+.product-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 230px;
+    height: 450px;
+    text-align: center;
+    margin: 20px;
+    float: left;
+}
+
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.product-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+
+.cart-button {
+    background-color: #2d8442;
+    color: #fff;
+    flex: auto;
+    padding: 8px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.output-field {
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 98%;
+    height: 75px;
+    background-color: #2d8442;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+
+
+button {
+color: #367055;
+padding: 8px 15px;
+border: none;
+cursor: pointer;
+font-size: 18px;
+font-weight: bold;
+border-radius: 5px;
+}
+
+
+button:hover {
+background-color: #d2e6c4;
+}
+
+#commercial-button {
+    background-color: #2d8442; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+}
+
+#gift-button {
+    background-color: #2d8442; 
+    width: 110px;
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+}
+
+#commercial-button:hover {
+    background-color: #93db60;
+}
+
+#gift-button:hover {
+    background-color: #93db60;
+}
+
+
+#product-container {
+    margin-top: 80px; 
+}
+
+
+.search-filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 45px;
+    margin-top: 15px;
+}
+
+#search {
+    flex: auto; 
+    width: 400px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+nav ul {
+    display: flex; 
+    list-style-type: none;
+    margin: 0; 
+    padding: 0; 
+}
+
+nav ul li {
+    margin-left: 30px; 
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+
+
